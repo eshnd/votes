@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import sys
 
-if len(sys.argv > 1):
+if len(sys.argv) > 1:
     name = sys.argv[1]
 else:
     print("No package name provided")
