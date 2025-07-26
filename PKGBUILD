@@ -1,16 +1,16 @@
 pkgname=votes
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="A simple tool that tells you how many votes an AUR package has"
+pkgdesc="A tool that tells you how many votes an AUR package has"
 arch=('any')
 url="https://github.com/eshnd/votes"
 license=('MIT')
-depends=('python')
-source=("$pkgname-$pkgver.tar.gz")
-md5sums=('SKIP') 
+depends=('python' 'python-requests' 'python-beautifulsoup4')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+md5sums=('SKIP')
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"
-  install -Dm755 my-python-app.py "$pkgdir/usr/bin/my-python-app"
+  install -Dm755 votes.py "$pkgdir/usr/bin/votes"
 }
 
