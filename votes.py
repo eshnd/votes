@@ -14,6 +14,6 @@ data = [tag.get_text(strip=True) for tag in tags]
 
 for i in range(len(data)):
     if (data[i] == "Votes:"):
-        print("Votes: " + data[i + 1])
+        print(f'AUR votes for "{name}": ' + data[i + 1])
         sys.exit()
 print(f'No package found with name: "{name}"')

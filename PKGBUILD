@@ -1,13 +1,13 @@
 pkgname=votes
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="A tool that tells you how many votes an AUR package has"
+pkgdesc="A simple tool that tells you how many votes an AUR package has"
 arch=('any')
 url="https://github.com/eshnd/votes"
 license=('MIT')
 depends=('python')
 source=("$pkgname-$pkgver.tar.gz")
-md5sums=('SKIP')  # or use actual hash
+md5sums=('SKIP') 
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"
