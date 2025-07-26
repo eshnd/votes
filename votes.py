@@ -3,7 +3,12 @@ from bs4 import BeautifulSoup
 import requests
 import sys
 
-name = sys.argv[1]
+if len(sys.argv > 1):
+    name = sys.argv[1]
+else:
+    print("No package name provided")
+    sys.exit()
+
 url = f'https://aur.archlinux.org/packages/{name}'  
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
